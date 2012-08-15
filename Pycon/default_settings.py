@@ -2,7 +2,7 @@
 # Django settings for Pycon project.
 import os
 from django.conf import global_settings
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 ADMINS = (
