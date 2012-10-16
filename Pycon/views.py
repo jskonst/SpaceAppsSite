@@ -33,7 +33,10 @@ def contacts(request):
 
 
 def schedule(request):
-    text = "Расписание конференции будет сформировано после окончания регистрации"
+    staticfile = settings.STATIC_ROOT + "progr.html"
+    info = open(staticfile)
+    text = info.read()
+    info.close()
     return render_to_response('schedule.html', {'content': text}, RequestContext(request))
 
 
