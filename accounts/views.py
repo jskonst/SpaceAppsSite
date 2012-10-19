@@ -54,3 +54,28 @@ def userlist(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         ulist = paginator.page(paginator.num_pages)
     return render_to_response('userlist.html', {'items': ulist}, RequestContext(request))
+
+
+def userbage(request):
+    profiles = UserProfile.objects.all()
+    # Теперь для каждого надо получить Фамилию и имя
+    result = []
+    for prof in profiles:
+        fName = prof.user.first_name
+        lName = prof.user.last_name
+        name = lName + " " + fName
+        if name == " ":
+            name = prof.user.username
+        result.append({'name': name, 'profile': prof})
+    paginator = Paginator(result, 100)
+    page = request.GET.get('page')
+    try:
+        ulist = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        ulist = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        ulist = paginator.page(paginator.num_pages)
+
+    return render_to_response('userbage.html', {'items': ulist}, RequestContext(request))
