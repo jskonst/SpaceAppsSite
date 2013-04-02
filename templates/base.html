@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>IvPy</title>
+    <title>Space Apps Challenge Ivanovo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,7 +39,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">IvPy</a>
+          <!--<a class="brand" href="/">SAC Ivanovo</a>-->
+          <!--
 	  {% block user_menu %}
           <div class="btn-group pull-right">
 		  {% if user.is_authenticated %}
@@ -65,16 +66,19 @@
 	    </ul>
 	    {% endif %}
           </div>
-	  {% endblock %}
+          {% endblock %}
+          -->
           <div class="nav-collapse">
             <ul class="nav">
             	{% block navigation %}
               <li class="active"><a href="/">Главная</a></li>
               <li><a href="/news">Новости</a></li>
               <li><a href="/contact">Контакты</a></li>
-              <li><a href="/schedule">Расписание</a></li>
-		<li><a href="/userlist">Участники</a></li>
+              <!--<li><a href="/schedule">Расписание</a></li>-->
+		<!--<li><a href="/userlist">Участники</a></li>-->
               {% endblock %}
+
+<!--
 	      {% block sections %}
 		<li class="dropdown">
 			<a href="#"
@@ -86,13 +90,13 @@
 		<ul class="dropdown-menu">
 			{% for section in sections %}
 			<li>
-				<!--Сразу генерируем меню по секциям - в get запросе-->
 				<a href="/section/?id={{section.id}}">{{section}}</a>
 			</li>
 			{% endfor %}
 		</ul>
 		</li>
-	      {% endblock %}
+        {% endblock %}
+        -->
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -123,29 +127,6 @@
     <script src="{{ STATIC_URL }}assets/js/bootstrap-carousel.js"></script>
     <script src="{{ STATIC_URL }}assets/js/bootstrap-typeahead.js"></script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-        try {
-            w.yaCounter15536563 = new Ya.Metrika({id:15536563, enableAll: true, webvisor:true});
-        } catch(e) {}
-    });
-    
-    var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f);
-    } else { f(); }
-})(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/15536563" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 
 
   </body>
