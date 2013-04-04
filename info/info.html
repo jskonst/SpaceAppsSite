@@ -1,1 +1,34 @@
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+ <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+
+
 <h1>International Space Apps Challenge</h1> 
+20 и 21-го Апреля 2013 г. NASA проводит очередной International Space Apps Challenge. Это крупное технологическое событие, в рамках которого люди со всего света собираются вместе для решения важных задач, с целью улучшить жизнь на Земле и жизнь в космосе.
+
+<h2>Вызов</h2>
+Участникам Space Apps Challenge предлагается более 50 уникальных задач, представленных NASA и его партнерами. 
+
+<h2>ИГХТУ</h2>
+ИГХТУ предоставляет возможность всем желающим участвовать в данном глобальном мероприятии собраться вместе в ИГХТУ 20 и 21-го апреля.
+
+Для оценки размеров требуемого помещения, просьба зарегистрироваться на данном сайте.
+
+Подробнее о мероприятии можно узнать на официальном <a href="http://spaceappschallenge.org/">сайте</a>. 
+<br>
+
+  <div id="map" style="height:400px;width:600px" ></div>
+
+   <script type="text/javascript">
+           var map = L.map('map').setView([57.00,40.988], 15);
+           L.tileLayer('http://{s}.tile.cloudmade.com/6af2b9c206524890b960a6a0ad4c1287/997/256/{z}/{x}/{y}.png', {
+                   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+                   maxZoom: 18
+           }).addTo(map);
+           var marker = L.marker([56.9996,40.9866]).addTo(map);
+           //var circle = L.circle([56.9993,40.9868], 100, {
+           //        color: 'red',
+           //        fillColor: '#f03',
+           //        fillOpacity: 0.2
+           //        }
+           //        ).addTo(map);
+            </script>
