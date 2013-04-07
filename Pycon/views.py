@@ -28,7 +28,7 @@ def agreement(request):
 
 
 def contacts(request):
-    text = "<address>Организатор мероприятия<br> <i class='icon-envelope'></i>Смирнова Ольга Павловна</address> <br>"
+    text = "<address>Организатор мероприятия<br> <i class='icon-envelope'></i> Смирнова Ольга Павловна <br> smirnowa07@rambler.ru</address> <br>"
     return render_to_response('contact.html', {'content': text}, RequestContext(request))
 
 
