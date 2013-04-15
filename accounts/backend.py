@@ -29,7 +29,7 @@ class RegBackend(DefaultBackend):
         profile_user.country = kwargs['country']
         profile_user.city = kwargs['city']
         profile_user.company = kwargs['company']
-        profile_user.dokladchik = kwargs['dokladchik']
+        #profile_user.dokladchik = kwargs['dokladchik']
         profile_user.surname = kwargs['surname']
         profile_user.job = kwargs['job']
         profile_user.accepted_eula = kwargs['accepted_eula']

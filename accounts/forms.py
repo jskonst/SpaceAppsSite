@@ -13,7 +13,7 @@ class UserRegistrationForm(RegistrationFormUniqueEmail):
     city = forms.CharField(label=u'Город')
     company = forms.CharField(label=u'Компания/Вуз')
     job = forms.CharField(required=False, label=u'Должность')
-    dokladchik = forms.BooleanField(required=False, label=u'Я буду докладчиком (доклады можно добавить в профиле)')
+    #dokladchik = forms.BooleanField(required=False, label=u'Я буду докладчиком (доклады можно добавить в профиле)')
     last_name = forms.CharField(max_length=50, required=False, label=u'Фамилия')
     first_name = forms.CharField(max_length=50, required=False, label=u'Имя')
     surname = forms.CharField(required=False, label=u'Отчество')
@@ -23,7 +23,7 @@ class UserRegistrationForm(RegistrationFormUniqueEmail):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('surname', 'country', 'city', 'company', 'job', 'dokladchik', )
+        fields = ('surname', 'country', 'city', 'company', 'job',)  # 'dokladchik', )
         exclude = ('user', )
 
 

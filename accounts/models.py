@@ -17,7 +17,7 @@ class UserProfile(models.Model):
     #Компания/Вуз
     company = models.CharField(max_length=100, verbose_name=u'Компания/Вуз')
     #Роль: докладчик/слушатель
-    dokladchik = models.BooleanField(blank=True, verbose_name=u'Я буду докладчиком (доклады можно добавить в профиле)')
+    #dokladchik = models.BooleanField(blank=True, verbose_name=u'Я буду докладчиком (доклады можно добавить в профиле)')
     #Для докладчиков:
     #Фамилия
     #Имя

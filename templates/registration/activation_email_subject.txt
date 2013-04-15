@@ -1,1 +1,1 @@
-Активация аккаунта в конференции по Python – {{ site }}
+Активация аккаунта в International Space Apps Challenge в ИГХТУ  – {{ site }}
