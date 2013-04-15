@@ -1,5 +1,5 @@
 /testForms
-/SpaceApp/settings.py
+SpaceApp/settings.py
 /UserProfile
 static/*
 !static
